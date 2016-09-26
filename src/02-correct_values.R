@@ -17,6 +17,22 @@ ModPA_CK <- gle(PT_ONLY_DATA_DF$mod_amount_minwk, PT_ONLY_DATA_DF$pt_recommended
 # 30Anx_CK
 "30Anx_CK" <- gle(PT_ONLY_DATA_DF$cdc30_anxious, PT_SEX_AGE_30ANX)
 
+# BevWk_CK
+comp_values <- c(PT_ONLY_DATA_DF$soda_week_sm, PT_ONLY_DATA_DF$juice_week_sm, PT_ONLY_DATA_DF$sugaryfruitdrink_week_sm)
+min_value <- max(comp_values)
+num_values <- sum(comp_values == min_value)
+if (num_values > 1) {
+    BevWk_CK <- 4
+} else if (min_value == PT_ONLY_DATA_DF$soda_week_sm) {
+    BevWk_CK <- 1
+} else if (min_value == PT_ONLY_DATA_DF$juice_week_sm) {
+    BevWk_CK <- 2
+} else if (min_value == PT_ONLY_DATA_DF$sugaryfruitdrink_week_sm) {
+    BevWk_CK <- 3
+} else {
+    BevWk_CK <- NULL
+}
+
 # 30Comp_CK
 comp_values <- c(PT_ONLY_DATA_DF$cdc30_energy, PT_ONLY_DATA_DF$cdc30_depressed, PT_ONLY_DATA_DF$cdc30_anxious)
 min_value <- min(comp_values)
