@@ -8,7 +8,7 @@ FULL_DATA_DF$pt_recommended_vege <- mapply(FUN = calculate_vegetable_servings_re
 FULL_DATA_DF$pt_recommended_vigorous_exercise <- mapply(FUN = calculate_vigorous_exercise_recommended, pt_sex = FULL_DATA_DF$Sex, pt_age = FULL_DATA_DF$Age)
 FULL_DATA_DF$pt_recommended_moderate_exercise <- mapply(FUN = calculate_moderate_exercise_recommended, pt_sex = FULL_DATA_DF$Sex, pt_age = FULL_DATA_DF$Age)
 FULL_DATA_DF$pt_depression_gauge <- sapply(X = FULL_DATA_DF$phq30_sum, FUN = calculate_depression_gauge)
-FULL_DATA_DF$pt_stress_gauge <- sapply(X = FULL_DATA_DF$chr_sum, FUN = calculate_stress_gauge) ########################## what are valid values for chr_sum
+FULL_DATA_DF$pt_stress_gauge <- sapply(X = FULL_DATA_DF$chr_sum, FUN = calculate_stress_gauge)
 FULL_DATA_DF$pt_bmi_cat <- sapply(X = FULL_DATA_DF$bmi_kgm2, FUN = calculate_pt_bmi_cat)
 FULL_DATA_DF$pt_waist_cat <- mapply(FUN = calculate_pt_waist_in_cat, pt_waist_in = FULL_DATA_DF$waistcirc_inches_1, pt_sex = FULL_DATA_DF$Sex)
 FULL_DATA_DF$pt_bp_s_cat <- sapply(X = FULL_DATA_DF$sbp, FUN = calculate_pt_bp_s_cat)
