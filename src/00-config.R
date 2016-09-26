@@ -14,7 +14,8 @@ source('src/helper_ck.R')
 #
 ###############################################################################
 #
-FULL_DATA <- 'data/Dummy infographics data.xlsx'
+FULL_DATA <- '../test_data/WICER comprehension test.xlsx'
+# FULL_DATA <- 'data/Dummy infographics data.xlsx'
 #
 ###############################################################################
 
