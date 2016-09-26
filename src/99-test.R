@@ -15,7 +15,6 @@ CK_PATTERN <- "_CK.?$"
 PT_ID <- 'Sample5'
 source('src/01-setup.R')
 source('src/02-correct_values.R')
-source('src/99-test.R')
 
 #
 # 01-setup
@@ -49,6 +48,7 @@ expect_equal(VigPA_CK, 1)
 expect_equal(ModPA_CK, 1)
 expect_equal(`30Dep_CK`, 2)
 expect_equal(`30Anx_CK`, 2)
+expect_equal(BevWk_CK, 2)
 expect_equal(`30Comp_CK`, 4)
 expect_equal(RecPA_CK, 2)
 expect_equal(BevRec_CK, 2)
