@@ -117,7 +117,7 @@ PT_SEX_AGE_ANX <- PT_SEX_AGE_ANX_DF$avg_sex_age
 
 ## DepB_CK
 PT_SEX_AGE_DEPB_DF <- full_data_age_sex_grouped_df %>%
-    summarise(avg_sex_age = mean(promis_depression_t))
+    summarise(avg_sex_age = mean(proms_depression_t))
 PT_SEX_AGE_DEPB <- PT_SEX_AGE_DEPB_DF$avg_sex_age
 
 ## BMI_CK

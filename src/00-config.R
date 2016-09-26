@@ -29,7 +29,7 @@ FULL_DATA_DF <- read_excel(FULL_DATA)
 all_ids <- FULL_DATA_DF[, 1]
 CK_PATTERN <- "_CK.?$"
 
-for (PT_ID in as.data.frame(all_ids)$ID) {
+for (PT_ID in as.data.frame(all_ids)[, 1]) {
     print(PT_ID)
     source('src/01-setup.R')
     source('src/02-correct_values.R')

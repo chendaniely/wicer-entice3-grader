@@ -49,7 +49,7 @@ Stress_CK <- gle(PT_ONLY_DATA_DF$pt_stress_gauge, PT_SEX_AGE_STRESS_GAUGE)
 Anx_CK <- gle_range(PT_ONLY_DATA_DF$promis_anxiety_t, 50)
 
 # DepB_CK
-DepB_CK <- gle_range(PT_ONLY_DATA_DF$promis_depression_t, 50)
+DepB_CK <- gle_range(PT_ONLY_DATA_DF$proms_depression_t, 50)
 
 # BMI_CK
 BMI_CK <- PT_ONLY_DATA_DF$pt_bmi_cat
