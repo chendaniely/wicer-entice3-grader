@@ -50,10 +50,10 @@ if (num_values > 1) {
 }
 
 # RecPA_CK
-"RecPA_CK" <- 2
+"RecPA_CK" <- 2 # constant
 
 # BevRec_CK
-"BevRec_CK" <- 2
+"BevRec_CK" <- 2 # constant
 
 # DepA_CK
 DepA_CK <- gle(PT_ONLY_DATA_DF$pt_depression_gauge, PT_SEX_AGE_DEPA_GAUGE)
@@ -83,10 +83,10 @@ RunD_CK <- gle(PT_ONLY_DATA_DF$fatexp41, PT_SEX_AGE_RUND, less = 3, greater = 1)
 RiskBP_CK1 <- PT_ONLY_DATA_DF$pt_bp_s_cat
 
 # RiskBP_CK2
-RiskBP_CK2 <- 1
+RiskBP_CK2 <- 1 # constant
 
 # RiskBMI_CK
-RiskBMI_CK <- 1
+RiskBMI_CK <- 1 # constant
 
 # Panel_CK
 Panel_CK <- calculate_panel_colver_ck(PT_ONLY_DATA_DF$pt_Panel_CK_unadjusted)
