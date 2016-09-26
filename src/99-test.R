@@ -1,3 +1,22 @@
+library(readxl)
+library(testthat)
+library(dplyr)
+library(stringr)
+rm(list = ls())
+source('src/helper_group_calculations.R')
+source('src/helper_ck.R')
+
+FULL_DATA <- 'data/Dummy infographics data.xlsx'
+
+FULL_DATA_DF <- read_excel(FULL_DATA)
+all_ids <- FULL_DATA_DF[, 1]
+CK_PATTERN <- "_CK.?$"
+
+PT_ID <- 'Sample5'
+source('src/01-setup.R')
+source('src/02-correct_values.R')
+source('src/99-test.R')
+
 #
 # 01-setup
 #

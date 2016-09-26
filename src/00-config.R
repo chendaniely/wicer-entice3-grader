@@ -36,10 +36,3 @@ for (PT_ID in as.data.frame(all_ids)$ID) {
     source('src/03-write_single_answers.R')
 }
 source('src/04-stack_ck.R')
-
-# uncomment below to run tests
-# PT_ID <- 'Sample5'
-# source('src/01-setup.R')
-# source('src/02-correct_values.R')
-# source('src/99-test.R')
-
