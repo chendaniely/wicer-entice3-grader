@@ -6,6 +6,9 @@ Repository to check responses from wicer-entice3
 1. Clone/download this repository
   1. click the green clone/download button above
   2. either use `git` to clone the repository
+    1. copy the linke
+    2. go to the directory you want the folder to be downloaded into
+    3. type `git clone LINK_YOU_JUST_COPIED`
   3. or click download zip
 2. use RStudio to open the `wicer-entice3-grader.Rproj` file
 3. in the `Files` tab in rstudio (bottom right corner) open the `src/00-config.R` file
