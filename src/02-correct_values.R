@@ -34,16 +34,16 @@ if (num_values > 1) {
 }
 
 # 30Comp_CK
-comp_values <- c(PT_ONLY_DATA_DF$cdc30_energy, PT_ONLY_DATA_DF$cdc30_depressed, PT_ONLY_DATA_DF$cdc30_anxious)
+comp_values <- c(PT_ONLY_DATA_DF$cdc30_energy, PT_ONLY_DATA_DF$cdc30_anxious, PT_ONLY_DATA_DF$cdc30_depressed)
 min_value <- min(comp_values)
 num_values <- sum(comp_values == min_value)
 if (num_values > 1) {
     "30Comp_CK" <- 4
 } else if (min_value == PT_ONLY_DATA_DF$cdc30_energy) {
     "30Comp_CK" <- 1
-} else if (min_value == PT_ONLY_DATA_DF$cdc30_depressed) {
-    "30Comp_CK" <- 2
 } else if (min_value == PT_ONLY_DATA_DF$cdc30_anxious) {
+    "30Comp_CK" <- 2
+} else if (min_value == PT_ONLY_DATA_DF$cdc30_depressed) {
     "30Comp_CK" <- 3
 } else {
     "30Comp_CK" <- NULL
