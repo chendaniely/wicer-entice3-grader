@@ -7,7 +7,7 @@
 
 echo '"patient_id","X30Anx_CK","X30Comp_CK","X30Dep_CK","Anx_CK","BevRec_CK","BevWk_CK","BMI_CK","Clover_CK","DepA_CK","DepB_CK","Fruit_CK","ModPA_CK","OvHea_CK","Panel_CK","RecPA_CK","RiskBMI_CK","RiskBP_CK1","RiskBP_CK2","RunD_CK","Stress_CK","Veg_CK","VigPA_CK","Waist_CK"'  > ../output/all_ck_bash.tmp
 
-touch all_ck_bash_temp.tmp
+touch ../output/all_ck_bash_temp.tmp
 
 for FILE in ../output/*.csv
 do
