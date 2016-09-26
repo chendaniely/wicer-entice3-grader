@@ -3,11 +3,11 @@
 
 ck_vars <- ls(pattern = CK_PATTERN)
 
-expect_equal(length(ck_vars), 22)
+expect_equal(length(ck_vars), 23)
 
-ck_value <- c(rep(x = NA, 22))
+ck_value <- c(rep(x = NA, 23))
 names(ck_value) <- ck_vars
-expect_equal(length(ck_value), 22)
+expect_equal(length(ck_value), 23)
 
 for (i in 1:length(ck_vars)) {
     ck_value[i] <- get(ck_vars[i])
