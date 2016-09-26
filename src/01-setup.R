@@ -140,6 +140,8 @@ PT_SEX_AGE_RUND_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(fatexp41))
 PT_SEX_AGE_RUND <- PT_SEX_AGE_RUND_DF$avg_sex_age
 
+# below commented variables do not need a group calculation
+
 ## RiskBP_CK1
 ## RiskBP_CK2
 #### correct answer is 1 only
