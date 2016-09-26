@@ -1,6 +1,11 @@
 library(stringr)
 
 rm(list = ls())
+
+if (file.exists('output/all_ck.csv')) {
+    file.remove('output/all_ck.csv')
+}
+
 single_cks <- list.files(path = 'output/', pattern = '*.csv')
 base_names <- str_replace(single_cks, '\\.csv', '')
 
