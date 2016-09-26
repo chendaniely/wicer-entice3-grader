@@ -22,3 +22,10 @@ Repository to check responses from wicer-entice3
   3. hit `ctrl+shift+s`
 
 the combined results will be in the `output` folder
+
+# Notes
+
+This repo replies on some of the 'mistakes' from the wicer-entice3 project
+
+1. the `proms_depression_t` variable in the column names is spelled wrong (was suppoed to be `promis_depression_t`)
+2. there is no column name for the first column
