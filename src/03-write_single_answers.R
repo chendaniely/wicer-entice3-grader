@@ -2,7 +2,7 @@
 # expect_equal(sum(ck_value_index), 22)
 
 ck_vars <- ls(pattern = CK_PATTERN)
-print(ck_vars)
+
 expect_equal(length(ck_vars), 22)
 
 ck_value <- c(rep(x = NA, 22))
@@ -19,4 +19,3 @@ pt_write_value <- as.matrix(ck_value) %>% t() %>% as.data.frame()
 pt_write_value
 
 write.csv(x = pt_write_value, file = sprintf('output/%s.csv', PT_ID), row.names = FALSE)
-
