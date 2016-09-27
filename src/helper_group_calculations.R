@@ -89,13 +89,13 @@ calculate_pt_bmi_cat <- function(pt_bmi_value){
     } else if (pt_bmi_value <= 0) {
         stop("BMI is less than or equal to 0")
     } else if (pt_bmi_value < 18.5) {
-        return(1)
+        return(1) # underweight
     } else if (pt_bmi_value >= 18.5 & pt_bmi_value < 25) {
-        return(2)
+        return(2) # normal
     } else if (pt_bmi_value >= 25 & pt_bmi_value < 30) {
-        return(3)
+        return(3) # overweight
     } else if (pt_bmi_value >= 30) {
-        return(4)
+        return(4) # obese
     }
     else{
         stop("unknown pt_bmi_value value passed")
@@ -168,9 +168,13 @@ get_health_summary_colors <- function(prolonged_stress_value,
     }
 
     bmi_cat <- calculate_pt_bmi_cat(bmi_value)
-    if (bmi_cat == 1) {
+    # 1: underweight
+    # 2: normal
+    # 3: overweight
+    # 4: obese
+    if (bmi_cat == 2) {
         bmi_color <- "Green"
-    } else if (bmi_cat == 2 | bmi_cat == 3) {
+    } else if (bmi_cat == 1 | bmi_cat == 3) {
         bmi_color <- "Yellow"
     } else if (bmi_cat == 4) {
         bmi_color <- "Red"
