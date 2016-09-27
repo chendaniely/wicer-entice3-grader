@@ -31,7 +31,7 @@ gle_range <- function(pt_value, comparison_value, buffer=5) {
 calculate_panel_colver_ck <- function(value) {
     if (!value %in% c(0, 1, 2, 3, 4)) {
         return(NA)
-    } else{
+    } else {
         return(value + 1)
     }
 }
