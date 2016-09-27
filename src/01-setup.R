@@ -13,11 +13,11 @@ FULL_DATA_DF$pt_bmi_cat <- sapply(X = FULL_DATA_DF$bmi_kgm2, FUN = calculate_pt_
 FULL_DATA_DF$pt_waist_cat <- mapply(FUN = calculate_pt_waist_in_cat, pt_waist_in = FULL_DATA_DF$waistcirc_inches_1, pt_sex = FULL_DATA_DF$Sex)
 FULL_DATA_DF$pt_bp_s_cat <- sapply(X = FULL_DATA_DF$sbp, FUN = calculate_pt_bp_s_cat)
 FULL_DATA_DF$pt_Panel_CK_unadjusted <- mapply(FUN = get_health_summary_colors,
-                                   prolonged_stress_value = FULL_DATA_DF$chr_sum,
-                                   bmi_value = FULL_DATA_DF$bmi_kgm2,
-                                   oral_health_value = FULL_DATA_DF$o11,
-                                   blood_pressure_s_value = FULL_DATA_DF$sbp,
-                                   blood_pressure_d_value = FULL_DATA_DF$dbp)
+                                              prolonged_stress_value = FULL_DATA_DF$chr_sum,
+                                              bmi_value = FULL_DATA_DF$bmi_kgm2,
+                                              oral_health_value = FULL_DATA_DF$o11,
+                                              blood_pressure_s_value = FULL_DATA_DF$sbp,
+                                              blood_pressure_d_value = FULL_DATA_DF$dbp)
 FULL_DATA_DF$pt_cloverleaf_fruit <- mapply(FUN = calculate_cloverleaf_fruit_value,
                                            fruit_value = FULL_DATA_DF$fruit_wk_sm_perday,
                                            vegetable_value = FULL_DATA_DF$veganddarkvege_wk_perday,
