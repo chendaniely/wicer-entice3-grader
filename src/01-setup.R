@@ -1,6 +1,17 @@
 # RESPONDENT_DATA_DF <- read.csv(RESPONDENT_DATA)
 # RESPONDENT_DEMO_DF <- read.csv(RESPONDENT_DEMO)
 
+# round values
+FULL_DATA_DF$bmi_kgm2 <- round(FULL_DATA_DF$bmi_kgm2, digits = 1)
+FULL_DATA_DF$fruit_wk_sm_perday <- round(FULL_DATA_DF$fruit_wk_sm_perday, digits = 1)
+FULL_DATA_DF$veganddarkvege_wk_perday <- round(FULL_DATA_DF$veganddarkvege_wk_perday, digits = 1)
+FULL_DATA_DF$vig_amount_minwk <- round(FULL_DATA_DF$vig_amount_minwk)
+FULL_DATA_DF$soda_week_sm <- round(FULL_DATA_DF$soda_week_sm)
+FULL_DATA_DF$juice_week_sm <- round(FULL_DATA_DF$juice_week_sm)
+FULL_DATA_DF$sugaryfruitdrink_week_sm <- round(FULL_DATA_DF$sugaryfruitdrink_week_sm)
+FULL_DATA_DF$sbp <- round(FULL_DATA_DF$sbp)
+FULL_DATA_DF$dbp <- round(FULL_DATA_DF$dbp)
+
 # calculate addtional values
 FULL_DATA_DF$pt_age_group <- sapply(X = FULL_DATA_DF$Age, FUN = calculate_age_group)
 FULL_DATA_DF$pt_recommended_fruit <- mapply(FUN = calculate_fruit_servings_recommended, pt_sex = FULL_DATA_DF$Sex, pt_age = FULL_DATA_DF$Age)
@@ -49,32 +60,32 @@ full_data_age_sex_grouped_df <- FULL_DATA_DF[FULL_DATA_DF$pt_age_group == PT_AGE
 ## Fruit_CK
 PT_SEX_AGE_FRUIT_DF <-  full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(fruit_wk_sm_perday))
-PT_SEX_AGE_FRUIT <- PT_SEX_AGE_FRUIT_DF$avg_sex_age
+PT_SEX_AGE_FRUIT <- PT_SEX_AGE_FRUIT_DF$avg_sex_age %>% round(digits = 1)
 
 ## Veg_CK
 PT_SEX_AGE_VEG_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(veganddarkvege_wk_perday))
-PT_SEX_AGE_VEG <- PT_SEX_AGE_VEG_DF$avg_sex_age
+PT_SEX_AGE_VEG <- PT_SEX_AGE_VEG_DF$avg_sex_age %>% round(digits = 1)
 
 ## VigPA_CK
 PT_SEX_AGE_VIGPA_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(vig_amount_minwk))
-PT_SEX_AGE_VIGPA <- PT_SEX_AGE_VIGPA_DF$avg_sex_age
+PT_SEX_AGE_VIGPA <- PT_SEX_AGE_VIGPA_DF$avg_sex_age %>% round()
 
 ## ModPA_CK
 PT_SEX_AGE_MODPA_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(mod_amount_minwk))
-PT_SEX_AGE_MODPA <- PT_SEX_AGE_MODPA_DF$avg_sex_age
+PT_SEX_AGE_MODPA <- PT_SEX_AGE_MODPA_DF$avg_sex_age %>% round()
 
 ## 30Dep_CK
 PT_SEX_AGE_30DEP_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(cdc30_depressed))
-PT_SEX_AGE_30DEP <- PT_SEX_AGE_30DEP_DF$avg_sex_age
+PT_SEX_AGE_30DEP <- PT_SEX_AGE_30DEP_DF$avg_sex_age %>% round()
 
 ## 30Anx_CK
 PT_SEX_AGE_30ANX_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(cdc30_anxious))
-PT_SEX_AGE_30ANX <- PT_SEX_AGE_30ANX_DF$avg_sex_age
+PT_SEX_AGE_30ANX <- PT_SEX_AGE_30ANX_DF$avg_sex_age %>% round()
 
 ## BevWk_CK
 PT_SEX_AGE_BEVWK_DF <- full_data_age_sex_grouped_df %>%
@@ -89,7 +100,7 @@ PT_SEX_AGE_30COMP <- PT_SEX_AGE_30COMP_DF$avg_sex_age
 ## RecPA_CK
 PT_SEX_AGE_RECPA_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(mod_amount_minwk))
-PT_SEX_AGE_RECPA <- PT_SEX_AGE_RECPA_DF$avg_sex_age
+PT_SEX_AGE_RECPA <- PT_SEX_AGE_RECPA_DF$avg_sex_age %>% round()
 
 ## BevRec_CK
 PT_SEX_AGE_BEVREC_DF <- full_data_age_sex_grouped_df %>%
@@ -106,7 +117,7 @@ PT_SEX_AGE_DEPA_GAUGE <- calculate_depression_gauge(PT_SEX_AGE_DEPA)
 ## Stress_CK
 PT_SEX_AGE_STRESS_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(chr_sum))
-PT_SEX_AGE_STRESS <- PT_SEX_AGE_STRESS_DF$avg_sex_age
+PT_SEX_AGE_STRESS <- PT_SEX_AGE_STRESS_DF$avg_sex_age %>% round()
 
 PT_SEX_AGE_STRESS_GAUGE <- calculate_depression_gauge(PT_SEX_AGE_STRESS)
 
@@ -133,12 +144,12 @@ PT_SEX_AGE_WAIST <- PT_SEX_AGE_WAIST_DF$avg_sex_age
 ## OvHea_CK
 PT_SEX_AGE_OVHEA_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(sf_1))
-PT_SEX_AGE_OVHEA <- PT_SEX_AGE_OVHEA_DF$avg_sex_age
+PT_SEX_AGE_OVHEA <- PT_SEX_AGE_OVHEA_DF$avg_sex_age %>% round()
 
 ## RunD_CK
 PT_SEX_AGE_RUND_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(fatexp41))
-PT_SEX_AGE_RUND <- PT_SEX_AGE_RUND_DF$avg_sex_age
+PT_SEX_AGE_RUND <- PT_SEX_AGE_RUND_DF$avg_sex_age %>% round()
 
 # below commented variables do not need a group calculation
 

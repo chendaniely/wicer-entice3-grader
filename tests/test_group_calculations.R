@@ -276,19 +276,19 @@ test_that('calculate_cloverleaf_physical_value_excellent', {
     expect_equal(calculate_cloverleaf_physical_value_excellent(moderate_value = 10, vigorous_value = 10), NA)
 })
 test_that('calculate_cloverleaf_ck', {
-    expect_equal(calculate_cloverleaf_ck(fruit = 'Excellent', physical = NA, overall = NA, mental = NA), 1)
-    expect_equal(calculate_cloverleaf_ck(fruit = NA, physical = 'Excellent', overall = NA, mental = NA), 1)
-    expect_equal(calculate_cloverleaf_ck(fruit = NA, physical = NA, overall = 'Excellent', mental = NA), 1)
-    expect_equal(calculate_cloverleaf_ck(fruit = NA, physical = NA, overall = NA, mental = 'Excellent'), 1)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = 'Excellent', physical = NA, overall = NA, mental = NA), 1)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = NA, physical = 'Excellent', overall = NA, mental = NA), 1)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = NA, physical = NA, overall = 'Excellent', mental = NA), 1)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = NA, physical = NA, overall = NA, mental = 'Excellent'), 1)
 
-    expect_equal(calculate_cloverleaf_ck(fruit = 'Excellent', physical = 'Excellent', overall = NA, mental = NA), 2)
-    expect_equal(calculate_cloverleaf_ck(fruit = 'Excellent', physical = NA, overall = 'Excellent', mental = NA), 2)
-    expect_equal(calculate_cloverleaf_ck(fruit = 'Excellent', physical = NA, overall = NA, mental = 'Excellent'), 2)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = 'Excellent', physical = 'Excellent', overall = NA, mental = NA), 2)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = 'Excellent', physical = NA, overall = 'Excellent', mental = NA), 2)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = 'Excellent', physical = NA, overall = NA, mental = 'Excellent'), 2)
 
-    expect_equal(calculate_cloverleaf_ck(fruit = NA, physical = 'Excellent', overall = 'Excellent', mental = NA), 2)
-    expect_equal(calculate_cloverleaf_ck(fruit = NA, physical = 'Excellent', overall = NA, mental = 'Excellent'), 2)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = NA, physical = 'Excellent', overall = 'Excellent', mental = NA), 2)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = NA, physical = 'Excellent', overall = NA, mental = 'Excellent'), 2)
 
-    expect_equal(calculate_cloverleaf_ck(fruit = NA, physical = 'Excellent', overall = 'Excellent', mental = 'Excellent'), 3)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = NA, physical = 'Excellent', overall = 'Excellent', mental = 'Excellent'), 3)
 
-    expect_equal(calculate_cloverleaf_ck(fruit = 'Excellent', physical = 'Excellent', overall = 'Excellent', mental = 'Excellent'), 4)
+    expect_equal(calculate_cloverleaf_ck_excellent(fruit = 'Excellent', physical = 'Excellent', overall = 'Excellent', mental = 'Excellent'), 4)
 })
