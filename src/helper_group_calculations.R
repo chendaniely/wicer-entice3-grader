@@ -265,7 +265,7 @@ calculate_cloverleaf_physical_value_excellent <- function(moderate_value, vigoro
     }
 }
 
-calculate_cloverleaf_ck <- function(fruit, physical, overall, mental) {
+calculate_cloverleaf_ck_excellent <- function(fruit, physical, overall, mental) {
     values <- c(fruit, physical, overall, mental)
     ideal_values <- values == "Excellent"
     count_ideal <- sum(ideal_values, na.rm = TRUE)
