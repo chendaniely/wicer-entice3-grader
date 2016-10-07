@@ -175,14 +175,10 @@ get_health_summary_colors_yellow <- function(prolonged_stress_value,
         bmi_color <- NA
     }
 
-    if (oral_health_value %in% c(1, 2)) {
-        oral_health_color <- "Green"
-    } else if (oral_health_value == 3) {
+    if (oral_health_value == 3) {
         oral_health_color <- "Yellow"
-    } else if (oral_health_value == 4) {
-        oral_health_color <- "Red"
     } else {
-        stop("Unknown value for oral_health")
+        oral_health_color <- NA
     }
 
     if (blood_pressure_s_value <= 120 & blood_pressure_d_value <= 80) {
