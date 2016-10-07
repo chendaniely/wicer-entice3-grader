@@ -247,7 +247,7 @@ calculate_cloverleaf_overall_value_excellent <- function(overall_value){
 #' Middle petal if 75 < adj. min. < 150 (good/bueno).
 #' Small petal if 0 < adj. min. <     75 min (fair/bajo).
 #' Tiny petal if zero (poor/muy bajo)
-calculate_cloverleaf_physical_value <- function(moderate_value, vigorous_value){
+calculate_cloverleaf_physical_value_excellent <- function(moderate_value, vigorous_value){
     moderate_value <- as.numeric(moderate_value)
     vigorous_value <- as.numeric(vigorous_value)
 
@@ -258,14 +258,10 @@ calculate_cloverleaf_physical_value <- function(moderate_value, vigorous_value){
         vigorous_value <- 0
     }
     adj_mins <- moderate_value + (2 * vigorous_value)
-    if (adj_mins == 0){
-        return("Poor")
-    } else if (adj_mins < 75){
-        return("Fair")
-    } else if (adj_mins < 150){
-        return("Good")
-    } else if (adj_mins >= 150){
+    if (adj_mins >= 150){
         return("Excellent")
+    } else {
+        return(NA)
     }
 }
 
