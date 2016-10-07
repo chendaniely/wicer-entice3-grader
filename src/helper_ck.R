@@ -1,3 +1,8 @@
+#`takes 2 values:
+# 1 if the first value is less than the second
+# 2 if both values are the same
+# 3 if the first value is greater than the second
+# NA otherwise
 gle <- function(pt_value, comparison_value, less=1, equal=2, greater=3) {
     if (is.na(pt_value) | is.na(comparison_value)) {
         return(NA)
@@ -13,6 +18,8 @@ gle <- function(pt_value, comparison_value, less=1, equal=2, greater=3) {
     }
 }
 
+# similar to the gle function but instead of hard less, equal, and greater values
+# it will return values based on a range between the comparison value
 gle_range <- function(pt_value, comparison_value, buffer=5) {
     if (is.na(pt_value) | is.na(comparison_value)) {
         return(NA)
