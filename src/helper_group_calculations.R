@@ -232,19 +232,13 @@ calculate_cloverleaf_mental_value_excellent <- function(mental_value){
 
 #' Five petal sizes correspond to poor, fair, good, very good, and
 #' excellent / mala, regular, buena, muy buena, excelente
-calculate_cloverleaf_overall_value <- function(overall_value){
-    if (is.na(overall_value)){
+calculate_cloverleaf_overall_value_excellent <- function(overall_value){
+    if (is.na(overall_value)) {
         return(NA)
-    } else if (overall_value == 1){
-        return("Poor")
-    } else if (overall_value == 2){
-        return("Fair")
-    } else if (overall_value == 3){
-        return("Good")
-    } else if (overall_value == 4){
-        return("Very Good")
-    } else if (overall_value == 5){
+    } else if (overall_value == 1) {
         return("Excellent")
+    } else{
+        return(NA)
     }
 }
 
