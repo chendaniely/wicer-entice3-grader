@@ -169,14 +169,10 @@ get_health_summary_colors_yellow <- function(prolonged_stress_value,
     # 2: normal
     # 3: overweight
     # 4: obese
-    if (bmi_cat == 2) {
-        bmi_color <- "Green"
-    } else if (bmi_cat == 1 | bmi_cat == 3) {
+    if (bmi_cat == 1 | bmi_cat == 3) {
         bmi_color <- "Yellow"
-    } else if (bmi_cat == 4) {
-        bmi_color <- "Red"
     } else {
-        stop("Unknown value for bmi_cat and/or bmi_value")
+        bmi_color <- NA
     }
 
     if (oral_health_value %in% c(1, 2)) {
