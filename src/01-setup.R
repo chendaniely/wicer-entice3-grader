@@ -12,25 +12,25 @@ FULL_DATA_DF$pt_stress_gauge <- sapply(X = FULL_DATA_DF$chr_sum, FUN = calculate
 FULL_DATA_DF$pt_bmi_cat <- sapply(X = FULL_DATA_DF$bmi_kgm2, FUN = calculate_pt_bmi_cat)
 FULL_DATA_DF$pt_waist_cat <- mapply(FUN = calculate_pt_waist_in_cat, pt_waist_in = FULL_DATA_DF$waistcirc_inches_1, pt_sex = FULL_DATA_DF$Sex)
 FULL_DATA_DF$pt_bp_s_cat <- sapply(X = FULL_DATA_DF$sbp, FUN = calculate_pt_bp_s_cat)
-FULL_DATA_DF$pt_Panel_CK_unadjusted <- mapply(FUN = get_health_summary_colors,
+FULL_DATA_DF$pt_Panel_CK_unadjusted <- mapply(FUN = get_health_summary_colors_yellow,
                                               prolonged_stress_value = FULL_DATA_DF$chr_sum,
                                               bmi_value = FULL_DATA_DF$bmi_kgm2,
                                               oral_health_value = FULL_DATA_DF$o11,
                                               blood_pressure_s_value = FULL_DATA_DF$sbp,
                                               blood_pressure_d_value = FULL_DATA_DF$dbp)
-FULL_DATA_DF$pt_cloverleaf_fruit <- mapply(FUN = calculate_cloverleaf_fruit_value,
+FULL_DATA_DF$pt_cloverleaf_fruit <- mapply(FUN = calculate_cloverleaf_fruit_value_excellent,
                                            fruit_value = FULL_DATA_DF$fruit_wk_sm_perday,
                                            vegetable_value = FULL_DATA_DF$veganddarkvege_wk_perday,
                                            pt_sex = FULL_DATA_DF$Sex,
                                            pt_age = FULL_DATA_DF$Age)
-FULL_DATA_DF$pt_cloverleaf_physical <- mapply(FUN = calculate_cloverleaf_physical_value,
+FULL_DATA_DF$pt_cloverleaf_physical <- mapply(FUN = calculate_cloverleaf_physical_value_excellent,
                                               moderate_value = FULL_DATA_DF$mod_amount_minwk,
                                               vigorous_value = FULL_DATA_DF$vig_amount_minwk)
-FULL_DATA_DF$pt_cloverleaf_overall <- mapply(FUN = calculate_cloverleaf_overall_value,
+FULL_DATA_DF$pt_cloverleaf_overall <- mapply(FUN = calculate_cloverleaf_overall_value_exellent,
                                              overall_value = FULL_DATA_DF$sf_1)
-FULL_DATA_DF$pt_cloverleaf_mental <- mapply(FUN = calculate_cloverleaf_mental_value,
+FULL_DATA_DF$pt_cloverleaf_mental <- mapply(FUN = calculate_cloverleaf_mental_value_excellent,
                                             mental_value = FULL_DATA_DF$cdc30_mental)
-FULL_DATA_DF$Clover_CK_unadjusted <- mapply(FUN = calculate_cloverleaf_ck,
+FULL_DATA_DF$Clover_CK_unadjusted <- mapply(FUN = calculate_cloverleaf_ck_excellent,
                                             fruit = FULL_DATA_DF$pt_cloverleaf_fruit,
                                             physical = FULL_DATA_DF$pt_cloverleaf_physical,
                                             overall = FULL_DATA_DF$pt_cloverleaf_overall,
