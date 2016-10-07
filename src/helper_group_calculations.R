@@ -187,12 +187,12 @@ get_health_summary_colors_yellow <- function(prolonged_stress_value,
         blood_pressure_color <- NA
     }
 
-    color_values = c(prolonged_stress_color,
+    color_values <- c(prolonged_stress_color,
                      bmi_color,
                      oral_health_color,
                      blood_pressure_color)
-    borderline = color_values == 'Yellow'
-    return(sum(borderline))
+    borderline <- color_values == 'Yellow'
+    return(sum(borderline, na.rm = TRUE))
 }
 
 
