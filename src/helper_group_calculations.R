@@ -196,27 +196,22 @@ get_health_summary_colors_yellow <- function(prolonged_stress_value,
 }
 
 
-calculate_cloverleaf_fruit_value <- function(fruit_value, vegetable_value,
+calculate_cloverleaf_fruit_value_excellent <- function(fruit_value, vegetable_value,
                                              pt_sex, pt_age){
-    fruit_min <- calculate_fruit_servings_recommended(
-        pt_sex, pt_age)
+    fruit_min <- calculate_fruit_servings_recommended(pt_sex, pt_age)
+    vegetable_min <- calculate_vegetable_servings_recommended(pt_sex, pt_age)
 
-    vegetable_min <- calculate_vegetable_servings_recommended(
-        pt_sex, pt_age)
-    if (is.na(fruit_value)){
+    if (is.na(fruit_value)) {
         fruit_value <- 0
     }
-    if (is.na(vegetable_value)){
+    if (is.na(vegetable_value)) {
         vegetable_value <- 0
     }
-    if (fruit_value == 0 & vegetable_value == 0){
-        return("Poor")
-    } else if (fruit_value >= fruit_min & vegetable_value >= vegetable_min){
+
+    if (fruit_value >= fruit_min & vegetable_value >= vegetable_min){
         return("Excellent")
-    } else if (fruit_value >= fruit_min | vegetable_value >= vegetable_min){
-        return("Good")
-    } else if (fruit_value > 0 | vegetable_value > 0){
-        return("Fair")
+    } else {
+        return(NA)
     }
 }
 
