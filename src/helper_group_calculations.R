@@ -152,19 +152,16 @@ is_between <- function(x, a, b) {
     x > a & x < b
 }
 
-get_health_summary_colors <- function(prolonged_stress_value,
+get_health_summary_colors_yellow <- function(prolonged_stress_value,
                                       bmi_value,
                                       oral_health_value,
                                       blood_pressure_s_value,
                                       blood_pressure_d_value) {
-    if (prolonged_stress_value == 0) {
-        prolonged_stress_color <- "Green"
-    } else if (prolonged_stress_value == 1 | prolonged_stress_value == 2) {
+
+    if (prolonged_stress_value == 3) {
         prolonged_stress_color <- "Yellow"
-    } else if (prolonged_stress_value >= 3) {
-        prolonged_stress_color <- "Red"
     } else {
-        stop("Unknown value for prolonged_stress")
+        prolonged_stress_color <- NA
     }
 
     bmi_cat <- calculate_pt_bmi_cat(bmi_value)
