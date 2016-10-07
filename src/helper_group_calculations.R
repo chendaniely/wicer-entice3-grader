@@ -181,14 +181,10 @@ get_health_summary_colors_yellow <- function(prolonged_stress_value,
         oral_health_color <- NA
     }
 
-    if (blood_pressure_s_value <= 120 & blood_pressure_d_value <= 80) {
-        blood_pressure_color <- "Green"
-    } else if (is_between(blood_pressure_s_value, 120, 140) | is_between(blood_pressure_d_value, 80, 90)) {
+    if (is_between(blood_pressure_s_value, 120, 140) | is_between(blood_pressure_d_value, 80, 90)) {
         blood_pressure_color <- "Yellow"
-    } else if (blood_pressure_s_value >= 140 | blood_pressure_d_value >= 90) {
-        blood_pressure_color <- "Red"
     } else {
-        stop("Unknown blood_pressure_s_value and/or blood_pressure_d_value")
+        blood_pressure_color <- NA
     }
 
     color_values = c(prolonged_stress_color,
