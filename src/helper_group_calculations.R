@@ -219,18 +219,12 @@ calculate_cloverleaf_fruit_value_excellent <- function(fruit_value, vegetable_va
 #'Largish petal for 1-5 days (good/buena).
 #'Medium petal for 6-10 days (fair/regular).
 #'Small petal for >10 days (poor/mala).
-calculate_cloverleaf_mental_value <- function(mental_value){
+calculate_cloverleaf_mental_value_excellent <- function(mental_value){
     if (is.na(mental_value)){
         return(NA)
     }
-    if (mental_value == 0){
+    if (mental_value == 0) {
         return("Excellent")
-    } else if (mental_value >= 1 & mental_value <= 5){
-        return("Good")
-    } else if (mental_value >= 6 & mental_value <= 10){
-        return("Fair")
-    } else if (mental_value > 10){
-        return("Poor")
     } else {
         return(NA)
     }
