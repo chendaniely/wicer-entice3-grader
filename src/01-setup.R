@@ -110,7 +110,7 @@ PT_SEX_AGE_BEVREC <- PT_SEX_AGE_BEVREC_DF$avg_sex_age
 ## DepA_CK
 PT_SEX_AGE_DEPA_DF <- full_data_age_sex_grouped_df %>%
     summarise(avg_sex_age = mean(phq30_sum))
-PT_SEX_AGE_DEPA <- PT_SEX_AGE_DEPA_DF$avg_sex_age
+PT_SEX_AGE_DEPA <- PT_SEX_AGE_DEPA_DF$avg_sex_age %>% round()
 
 PT_SEX_AGE_DEPA_GAUGE <- calculate_depression_gauge(PT_SEX_AGE_DEPA)
 
