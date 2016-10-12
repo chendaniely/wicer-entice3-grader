@@ -188,67 +188,67 @@ test_that('get_health_summary_colors', {
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 4, bmi_value = 18,   oral_health_value = 1, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 5, bmi_value = 18.4, oral_health_value = 2, blood_pressure_s_value = 140, blood_pressure_d_value = 80), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 0, bmi_value = 29.9, oral_health_value = 4, blood_pressure_s_value = 100, blood_pressure_d_value = 80), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 25,   oral_health_value = 2, blood_pressure_s_value = 160, blood_pressure_d_value = 80), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 25,   oral_health_value = 2, blood_pressure_s_value = 160, blood_pressure_d_value = 80), 1)
 
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 18,   oral_health_value = 1, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18,   oral_health_value = 1, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 4, bmi_value = 18.4, oral_health_value = 2, blood_pressure_s_value = 140, blood_pressure_d_value = 90), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 5, bmi_value = 25,   oral_health_value = 4, blood_pressure_s_value = 100, blood_pressure_d_value = 70), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 0, bmi_value = 29.9, oral_health_value = 2, blood_pressure_s_value = 160, blood_pressure_d_value = 100), 1)
 
     ## 1 from oral health
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 0, bmi_value = 42,   oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 24.9, oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 24.9, oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 4, bmi_value = 30,   oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
 
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 42,   oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 42,   oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 4, bmi_value = 24.9, oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 5, bmi_value = 30,   oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
 
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 0, bmi_value = 42,   oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 140, blood_pressure_d_value = 80), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 24.9, oral_health_value = 3, blood_pressure_s_value = 100, blood_pressure_d_value = 80), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 140, blood_pressure_d_value = 80), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 24.9, oral_health_value = 3, blood_pressure_s_value = 100, blood_pressure_d_value = 80), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 4, bmi_value = 30,   oral_health_value = 3, blood_pressure_s_value = 160, blood_pressure_d_value = 80), 1)
 
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 42,   oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 140, blood_pressure_d_value = 90), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 42,   oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 140, blood_pressure_d_value = 90), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 4, bmi_value = 24.9, oral_health_value = 3, blood_pressure_s_value = 100, blood_pressure_d_value = 70), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 5, bmi_value = 30,   oral_health_value = 3, blood_pressure_s_value = 160, blood_pressure_d_value = 100), 1)
 
     ## 1 from bp_s
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 0, bmi_value = 42,   oral_health_value = 1, blood_pressure_s_value = 121, blood_pressure_d_value = 80), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 18.5, oral_health_value = 2, blood_pressure_s_value = 139, blood_pressure_d_value = 90), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 24.9, oral_health_value = 4, blood_pressure_s_value = 122, blood_pressure_d_value = 70), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.5, oral_health_value = 2, blood_pressure_s_value = 139, blood_pressure_d_value = 90), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 24.9, oral_health_value = 4, blood_pressure_s_value = 122, blood_pressure_d_value = 70), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 4, bmi_value = 30,   oral_health_value = 2, blood_pressure_s_value = 138, blood_pressure_d_value = 100), 1)
 
     ## 1 from bp_d
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 0, bmi_value = 42,   oral_health_value = 1, blood_pressure_s_value = 120, blood_pressure_d_value = 81), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 18.5, oral_health_value = 2, blood_pressure_s_value = 140, blood_pressure_d_value = 89), 1)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 24.9, oral_health_value = 4, blood_pressure_s_value = 100, blood_pressure_d_value = 82), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.5, oral_health_value = 2, blood_pressure_s_value = 140, blood_pressure_d_value = 89), 1)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 24.9, oral_health_value = 4, blood_pressure_s_value = 100, blood_pressure_d_value = 82), 1)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 4, bmi_value = 30,   oral_health_value = 2, blood_pressure_s_value = 160, blood_pressure_d_value = 88), 1)
 
     ## 4
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.4, oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 4)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 29.9, oral_health_value = 3, blood_pressure_s_value = 139, blood_pressure_d_value = 89), 4)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 18.4, oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 4)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 29.9, oral_health_value = 3, blood_pressure_s_value = 139, blood_pressure_d_value = 89), 4)
 
     ## 3
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 0, bmi_value = 18.4, oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 3)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 5, bmi_value = 18.4, oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 3)
 
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 3)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 30,   oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 3)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 3)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 30,   oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 3)
 
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.4, oral_health_value = 2, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 3)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.4, oral_health_value = 4, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 3)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 18.4, oral_health_value = 2, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 3)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 18.4, oral_health_value = 4, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 3)
 
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.4, oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 3)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.4, oral_health_value = 3, blood_pressure_s_value = 140, blood_pressure_d_value = 90), 3)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 18.4, oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 3)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 2, bmi_value = 18.4, oral_health_value = 3, blood_pressure_s_value = 140, blood_pressure_d_value = 90), 3)
 
     ## 2
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 2)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.5, oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 2)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 5, bmi_value = 24.9, oral_health_value = 3, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 2)
-    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 1, bmi_value = 18.4, oral_health_value = 2, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 2)
+    expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 3, bmi_value = 18.4, oral_health_value = 2, blood_pressure_s_value = 121, blood_pressure_d_value = 81), 2)
     expect_equal(get_health_summary_colors_yellow(prolonged_stress_value = 4, bmi_value = 18.4, oral_health_value = 3, blood_pressure_s_value = 120, blood_pressure_d_value = 80), 2)
 })
 
