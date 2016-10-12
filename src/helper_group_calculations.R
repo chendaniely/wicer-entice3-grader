@@ -235,7 +235,7 @@ calculate_cloverleaf_mental_value_excellent <- function(mental_value){
 calculate_cloverleaf_overall_value_excellent <- function(overall_value){
     if (is.na(overall_value)) {
         return(NA)
-    } else if (overall_value == 1) {
+    } else if (overall_value == 5) { ## SHOULD BE 1, MAKING 5 to correct for entice3 image miss-match
         return("Excellent")
     } else{
         return(NA)
