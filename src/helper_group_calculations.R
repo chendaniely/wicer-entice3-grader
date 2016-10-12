@@ -158,7 +158,7 @@ get_health_summary_colors_yellow <- function(prolonged_stress_value,
                                       blood_pressure_s_value,
                                       blood_pressure_d_value) {
 
-    if (prolonged_stress_value == 3) {
+    if (prolonged_stress_value == 1 | prolonged_stress_value == 2) {
         prolonged_stress_color <- "Yellow"
     } else {
         prolonged_stress_color <- NA
