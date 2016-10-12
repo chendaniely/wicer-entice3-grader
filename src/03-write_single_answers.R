@@ -18,4 +18,8 @@ ck_value <- c('patient_id' = PT_ID, ck_value)
 pt_write_value <- as.matrix(ck_value) %>% t() %>% as.data.frame()
 pt_write_value
 
+if (any(is.na(pt_write_value))){
+    stop("Something's wrong, I found a missing value.")
+}
+
 write.csv(x = pt_write_value, file = sprintf('output/%s.csv', PT_ID), row.names = FALSE)
